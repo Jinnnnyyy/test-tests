@@ -1,0 +1,380 @@
+body,
+ul,
+dl,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+.warp{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg.jpg") no-repeat;
+    
+}
+
+.play_wrap{
+    width: 800px;
+    height: 544px;
+    position: fixed;
+    left:50%;
+    top:50%;
+    margin-left: -400px;
+    margin-top: -272px;
+}
+.search_bar{
+    height: 60px;
+    background-color:pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 11;
+}
+.search_bar img{
+    margin-left: 10px;
+    display: block;
+    width:50px;
+    height: 50px;
+
+}
+.search_bar span{
+    position: relative;
+    left:-145px;
+    bottom: -15px;
+    color: slateblue;
+}
+
+.search_bar input{
+    margin-right:20px;
+    width:296px;
+    height: 34px;
+    border-radius: 17px;
+    background: url("../images/zoom.png") 265px center no-repeat
+       rgba(255, 255, 255, 0.45); 
+    text-indent: 15px;
+    outline: none; 
+
+}
+
+.center_con{
+    height: 435px;
+    background-color: silver;
+    display: flex;
+    position: relative;
+
+}
+
+.song_wrapper{
+    width:200px;
+    height: 435px;
+    box-sizing: border-box;
+    padding: 10px;
+    list-style: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index:1;
+}
+
+.song_stretch{
+
+}
+
+.song_list{
+    width:100%;
+    overflow-y:auto;
+    overflow-x: hidden;
+    /* overflow-y:auto纵向溢出部分自动生成滚动条
+    横向自动隐藏 */
+    height: 100%;
+}
+.song_list::-webkit-scrollbar{
+    display: none;
+}
+
+.song_list li{
+    font-size: 12px;
+    color:purple;
+    height: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    /* flex-wrap 属性用于指定弹性盒子的子元素换行方式。
+    nowrap 是flex-wrap的 默认值，弹性容器为单行。该情况下弹性子项可能会溢出容器
+    flex-wrap：wrap ；弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行。 */
+    align-items: center;
+    width: 580px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.song_list li:nth-child(odd){
+    /* 元素的第二个子元素下标是奇数的b标签的背景色*/
+    background-color:antiquewhite;
+}
+
+.song_list li a{
+    display: block;
+    width:17px;
+    height: 17px;
+    background-image: url("../images/play.png");
+    background-size: 100%;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+.song_list li b{
+    font-weight: normal;
+    width:122px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 溢出部分以省略号显示 */
+
+}
+
+.song_stretch .song_list li b {
+    width: 200px;
+  }
+  
+  .song_stretch .song_list li em {
+    width: 150px;
+}
+
+.song_list li span{
+    width: 23px;
+    height: 17px;
+    margin-right: 50px;
+}
+
+.song_list li span i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /*  cursor:pointer：光标形状是手 */
+    background: url("../images/table.png") left -48px no-repeat;
+}
+
+.song_list li i{
+    font-style: normal;
+    width:100px;
+}
+
+.player_con{
+    width: 400px;
+    height: 435px;
+    position: absolute;
+    left: 200px;
+    top:0px;
+
+}
+.player_con2{
+    width: 400px;
+    height: 435px;
+    position: absolute;
+    left: 200px;
+    top:0px;
+
+
+}
+
+.player_con2 video{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 355px;
+    height: 265px;
+}
+
+.disc{
+    position: absolute;
+    left: 73px;
+    top:60px;
+    z-index: 9;
+
+}
+.cover{
+    position: absolute;
+    left: 125px;
+    top: 112px;
+    width: 150px;
+    height:150px;
+    border-radius: 75px;
+    z-index: 8;
+    /* z-index:inherit:元素从父级继承index的属性 */
+
+}
+
+.comment_wrapper{
+    width: 180px;
+    height: 410px;
+    list-style: none;
+    position: absolute;
+    left:600px;
+    top:0px;
+    padding:20px 10px;
+
+}
+
+.comment_wrapper .title{
+    position: absolute;
+    top:0px;
+    margin-top: 10px;
+}
+
+.comment_wrapper .comment_list{
+    overflow-y: auto;
+    height: 410px;
+}
+.comment_wrapper .comment_list::-webkit-scrollbar{
+    display: none;
+}
+.comment_wrapper dl{
+    width: 180px;
+    height: 54px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.comment_wrapper dt{
+    position: absolute;
+    left: 4px;
+    display: block;
+    width: 40px;
+    height: 44px;
+    top:10px;
+
+}
+
+.comment_wrapper dt img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+
+}
+
+.comment_wrapper dd{
+    font-size: 12px;
+}
+
+
+.comment_wrapper .name{
+    font-weight: bold;
+    color: #333;
+    padding-top: 10px;
+}
+.comment_wrapper .detail{
+    color: #666;
+    margin-top: 5px;
+    line-height: 18px;
+    /* 行间距百分比 */
+}
+
+audio_con{
+    
+    height: 50;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+.myaudio{
+    width: 800px;
+    height: 40px;
+    margin-top:5px;
+    outline: none;
+    background-color: aliceblue;
+}
+
+/* 旋转动画 */
+@keyframes Rotate{
+    from{
+        transform:rotateZ(0);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+/* 旋转的类名 */
+.autoRotate{
+    /* 动画效果：旋转 */
+    animation-name: Rotate;
+    /* 动画迭代次数：无限循环 */
+    animation-iteration-count: infinite;
+    /* 动画播放状态  已暂停*/
+    animation-play-state: paused;
+    /*动画定时功能   取消渐变效果  */
+    animation-timing-function: linear;
+    /* 动画周期 */
+    animation-duration: 5s;
+}
+
+/* 是否正在播放 */
+.player_con.playing .disc,
+.player_con.playing .cover{
+    animation-play-state: running;
+}
+.play_bar{
+    position: absolute;
+    left:200px;
+    top:-10px;
+    z-index:10;
+    transform: rotate(-25deg);
+    transform-origin: 12px 12px;
+    transition: 1s;
+}
+
+/* 播放杆 转回去 */
+.player_con.playing .play_bar{
+    transform:rotate(0);
+}
+/* 搜索历史列表 */
+.search_history{
+
+}
+
+.right_line{
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+.left_line{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.video_con video{
+    position: fixed;
+    width: 800px;
+    height: 546px;
+    left: 50%;
+    top:50%;
+    margin-top:-237px;
+    transform: translateX(-50%);
+    z-index: 666;
+}
+
+.video_con .mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 665;
+    background-color: #333;
+}
+
+.video_con .shutoff{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: url("../images/shutoff.png") no-repeat;
+    left: 50%;
+    margin-left: 400px;
+    margin-top: -273px;
+    top: 50%;
+    z-index: 995;
+}
